@@ -181,11 +181,11 @@ async def yplay(_, message: Message):
 
     if type=="youtube" or type=="query":
         if type=="youtube":
-            msg = await message.reply_text("⚡️ **Fetching Song From YouTube...**")
+            msg = await message.reply_text("🔥 **Fetching Song From YouTube...**")
             url=yturl
         elif type=="query":
             try:
-                msg = await message.reply_text("⚡️ **Fetching Song From YouTube...**")
+                msg = await message.reply_text("🔥 **Fetching Song From YouTube...**")
                 ytquery=ysearch
                 results = YoutubeSearch(ytquery, max_results=1).to_dict()
                 url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -327,7 +327,7 @@ async def deezer(_, message):
     user=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
     group_call = mp.group_call
     if album:
-        msg = await message.reply("⚡️ **Fetching Album From JioSaavn...**")
+        msg = await message.reply("🔥 **Fetching Album From JioSaavn...**")
         try:
             p = f"https://jiosaavn-api.vercel.app/albumsearch?query={album}"
             n = requests.get(p)
@@ -416,7 +416,7 @@ async def deezer(_, message):
             await mp.delete(message)
             pass
     else:
-        msg = await message.reply("⚡️ **Fetching Song From JioSaavn...**")
+        msg = await message.reply("🔥 **Fetching Song From JioSaavn...**")
         try:
             p = f"https://jiosaavn-api.vercel.app/search?query={query}"
             n = requests.get(p)
@@ -430,7 +430,7 @@ async def deezer(_, message):
             try:
                 thumb=a.get("image")
             except:
-                thumb="https://telegra.ph/file/181242eab5c4a74916d01.jpg"
+                thumb="https://telegra.ph/file/a2e01367f31abcad14cdd.jpg"
                 pass
             GET_THUMB[url] = thumb
         except:
@@ -1012,7 +1012,7 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 GetPlayListBot", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
+                            InlineKeyboardButton("🤖 GetPlayListBot", url=f"https://telegram.me/assistant_radio_bot{m.from_user.id}")
 
                         ]
                     ]
@@ -1024,15 +1024,15 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/subin_works')
+                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/tutorial_updates')
                         ],
                         [
-                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
+                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/assistant_radio_bot{m.from_user.id}")
 
                         ]
                     ]
                     )
-                k=await m.reply("You Have Not Subscribed to MY Update Channel, and Please Join My Update Channel to Use This Feature 🤒", reply_markup=markup)
+                k=await m.reply("You Have Not Subscribed to MY Update Channel, and Please Join My Update Channel to Use This Feature 💠", reply_markup=markup)
                 await mp.delete(k)
                 return
             elif ytplaylist == "kicked":
@@ -1273,7 +1273,7 @@ async def upload(client, message):
             title=playlist[0][1],
             duration=int(float(dur)),
             performer="MusicPlayer",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)</b>"
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [Music-Player](https://github.com/Randi356/MusicPlayer)</b>"
             )
         await m.delete()
     else:
@@ -1296,8 +1296,8 @@ async def upload(client, message):
             thumb=f"{playlist[0][5]}.jpeg",
             title=playlist[0][1],
             duration=int(float(dur)),
-            performer="MusicPlayer",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/subinps/MusicPlayer)</b>"
+            performer="Music-Player",
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [MusicPlayer](https://github.com/Randi356/MusicPlayer)</b>"
             )
         await m.delete()
         try:
@@ -1319,13 +1319,13 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('⚡️Make Own Bot', url='https://heroku.com/deploy?template=https://github.com/subinps/MusicPlayer'),
-            InlineKeyboardButton('🧩 Source Code', url='https://github.com/subinps/MusicPlayer'),
+            InlineKeyboardButton('⚡️Make Own Bot', url='https://heroku.com/deploy?template=https://github.com/Randi356/Music-Player'),
+            InlineKeyboardButton('🧩 Source Code', url='https://github.com/Randi356/Music-Player'),
         ],
         [
             InlineKeyboardButton('How to Make', url='https://youtu.be/iBK-5pP2eHM'),
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
         ]
         ]
-    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/subinps/MusicPlayer) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/Randi356/Music-Player) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
