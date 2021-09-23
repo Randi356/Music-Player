@@ -17,7 +17,7 @@ License -> https://github.com/Randi356/Music-Player/blob/master/LICENSE
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Randi356/Music-Player)
 
-[![Deploy To Railway](https://railway.app/button.svg)](https://railway.app/deploy?template=https://github.com/Randi356/Music-Player)
+[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Randi356/Music-Player) 
 
 NOTE: Make sure you have started a VoiceChat in your Group before deploying.
 ### Deploy to VPS
