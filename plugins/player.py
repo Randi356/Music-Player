@@ -1323,7 +1323,7 @@ async def not_chat(_, m: Message):
             InlineKeyboardButton('🧩 Source Code', url='https://github.com/Randi356/Music-Player'),
         ],
         [
-            InlineKeyboardButton('How to Make', url='https://youtu.be/iBK-5pP2eHM'),
+            InlineKeyboardButton('🙄JOIN KONTOL', url='https://t.me/codersSupport'),
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
         ]
         ]
